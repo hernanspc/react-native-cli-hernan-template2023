@@ -1,27 +1,36 @@
-import { StyleSheet, Text, TouchableOpacity, TouchableOpacityBase, View } from 'react-native'
-import React from 'react'
-import { SafeAreaView } from 'react-native-safe-area-context'
-import { Button } from '@rneui/themed';
+import * as React from 'react';
+import { View, Text } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-const App = () => {
+function HomeScreen() {
   return (
-    <View>
-      <Text>App</Text>
-      <Text>App</Text>
-      <Text>App</Text>
-      <Text>App</Text>
-      <Text>App</Text>
-      <Text>App</Text>
-
-
-      <Button title="Solid" />
-      <Button title="Outline" type="outline" />
-      <Button title="Clear" type="clear" />
-
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Home Screen</Text>
     </View>
-  )
+  );
 }
 
-export default App
+const Stack = createNativeStackNavigator();
 
-const styles = StyleSheet.create({})
+function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Home"
+          component={HomeScreen}
+          options={{
+            title: 'My home',
+            headerStyle: {
+              backgroundColor: '#f4511e',
+            },
+            headerTintColor: '#fff',
+          }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+export default App;
