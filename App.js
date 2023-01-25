@@ -1,39 +1,27 @@
-import * as React from 'react';
-import { View, Text } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createDrawerNavigator } from '@react-navigation/drawer';
+import { StyleSheet, Text, View } from 'react-native'
+import React from 'react'
+import Icon from 'react-native-vector-icons/FontAwesome';
 
-function Feed() {
+const App = () => {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Feed Screen</Text>
+    <View>
+      <Text>App</Text>
+      <Icon.Button
+        name="facebook"
+        backgroundColor="#3b5998"
+        onPress={() => { }}
+      >
+        Login with Facebook
+      </Icon.Button>
+      <Icon.Button name="twitter" backgroundColor="red">
+        <Text style={{ fontFamily: 'Arial', fontSize: 15 }}>
+          Login with Facebook
+        </Text>
+      </Icon.Button>
     </View>
-  );
+  )
 }
 
-function Article() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Article Screen</Text>
-    </View>
-  );
-}
+export default App
 
-const Drawer = createDrawerNavigator();
-
-function MyDrawer() {
-  return (
-    <Drawer.Navigator useLegacyImplementation>
-      <Drawer.Screen name="Feed" component={Feed} />
-      <Drawer.Screen name="Article" component={Article} />
-    </Drawer.Navigator>
-  );
-}
-
-export default function App() {
-  return (
-    <NavigationContainer>
-      <MyDrawer />
-    </NavigationContainer>
-  );
-}
+const styles = StyleSheet.create({})

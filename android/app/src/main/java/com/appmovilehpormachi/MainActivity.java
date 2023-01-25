@@ -1,4 +1,5 @@
 package com.appmovilehpormachi;
+import com.oblador.vectoricons.VectorIconsPackage;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
