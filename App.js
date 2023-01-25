@@ -13,7 +13,7 @@ const App = () => {
       >
         Login with Facebook
       </Icon.Button>
-      <Icon.Button name="twitter" backgroundColor="red">
+      <Icon.Button name="twitter" backgroundColor="#00ACEE">
         <Text style={{ fontFamily: 'Arial', fontSize: 15 }}>
           Login with Facebook
         </Text>
