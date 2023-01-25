@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import Icon from 'react-native-vector-icons/FontAwesome';
+import Bell from './src/icons/Bell';
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
           Login with Facebook
         </Text>
       </Icon.Button>
+      <Bell />
     </View>
   )
 }
